@@ -7,6 +7,7 @@ const aboutRoute = require("./routes/aboutRoute");
 const teamRoute = require("./routes/teamRoute");
 const blogRoute = require("./routes/blogRoute");
 const contactRoute = require("./routes/contactRoute");
+const adminRoute = require("./routes/adminRoute");
 
 const {
   errorHandler,
@@ -32,6 +33,7 @@ app.use("/about", aboutRoute);
 app.use("/team", teamRoute);
 app.use("/blogs", blogRoute);
 app.use("/contact", contactRoute);
+app.use("/buzzin/admin", adminRoute);
 
 //404 error handle
 app.use(notFoundHandler);
