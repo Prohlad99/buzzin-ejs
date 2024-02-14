@@ -1,0 +1,38 @@
+<%- include('../partials/blog/view/header.ejs'); %>
+<div class="wrapper">
+  <!-- Navbar -->
+  <%- include('../partials/index/top_nav.ejs'); %>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <%- include('../partials/index/aside.ejs'); %>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+                  
+        </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <%- include('../partials/category/list.ejs');%>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+  <%- include('../partials/index/footer_content.ejs');%>
+ 
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+<%- include('../partials/blog/view/footer.ejs'); %>
+

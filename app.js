@@ -2,12 +2,10 @@ const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
 //internal import
-const indexRouter = require("./routes/indexRoute");
-const aboutRoute = require("./routes/aboutRoute");
-const teamRoute = require("./routes/teamRoute");
-const blogRoute = require("./routes/blogRoute");
-const contactRoute = require("./routes/contactRoute");
+const clientViewRoute = require("./routes/clientViewRoute");
 const adminRoute = require("./routes/adminRoute");
+
+
 
 const {
   errorHandler,
@@ -28,12 +26,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 //routing setup
-app.use("/", indexRouter);
-app.use("/about", aboutRoute);
-app.use("/team", teamRoute);
-app.use("/blogs", blogRoute);
-app.use("/contact", contactRoute);
-app.use("/buzzin/admin", adminRoute);
+app.use("/", clientViewRoute);
+app.use("/admin", adminRoute)
+
 
 //404 error handle
 app.use(notFoundHandler);
