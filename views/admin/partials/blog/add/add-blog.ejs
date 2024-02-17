@@ -1,0 +1,106 @@
+<div class="mx-4 card card-primary">
+  <div class="card-header">
+     <h3 class="card-title">Add a Blog</h3>
+  </div>
+  <form role="form">
+     <div class="card-body">
+        <div class="row">
+           <div class="col-sm-6">
+              <!-- Date dd/mm/yyyy -->
+              <div class="form-group">
+                 <label>Publish Date:</label>
+                 <div class="input-group">
+                    <div class="input-group-prepend">
+                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                    <input type="text" name="publish_date"  class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                 </div>
+              </div>
+           </div>
+
+           <!-- category  -->
+           <div class="col-sm-6">
+              <div class="form-group">
+                 <label>Category:</label>
+                 <input
+                    type="text"
+                    class="form-control"
+                    placeholder="ex: business"
+                    name="category"
+                    />
+              </div>
+           </div>
+        </div>
+
+        <div class="row">
+          <!-- blog title  -->
+           <div class="col-sm-6">
+              <div class="form-group">
+                 <label for="title">Blog Title:</label>
+                 <input name="blog_title" type="text" class="form-control" id="title" placeholder="write here blog title">
+              </div>
+           </div>
+
+           <!-- meta tag  -->
+           <div class="col-sm-6">
+              <div class="form-group">
+                 <label for="meta_tag">Meta Tag:</label>
+                 <input name="meta_tag" type="text" class="form-control" id="meta_tag" placeholder="write here meta tag">
+              </div>
+           </div>
+        </div>
+
+        <!-- meta description  -->
+        <div class="form-group">
+           <label>Meta Description:</label>
+           <textarea class="form-control" name="meta_description" rows="4" placeholder="Write here meta description"></textarea>
+        </div>
+
+        <!-- blog thumbnail  -->
+        <div class="form-group">
+           <label for="exampleInputFile">Blog Thumbnail:</label>
+           <div class="input-group">
+              <div class="custom-file">
+                 <input type="file" name="thumbnail" class="custom-file-input" id="exampleInputFile">
+                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+              </div>
+              <div class="input-group-append">
+                 <span class="input-group-text" id="">Upload</span>
+              </div>
+           </div>
+        </div>
+
+        <!-- editor  -->
+        <div class="row">
+           <div class="col-md-12">
+              <div class="card card-outline card-info">
+                 <div class="card-header">
+                    <h3 class="card-title">
+                       Write Blog Description Here          
+                    </h3>
+                    <!-- tools box -->
+                    <div class="card-tools">
+                       <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip"
+                          title="Collapse">
+                       <i class="fas fa-minus"></i></button>
+                       <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
+                          title="Remove">
+                       <i class="fas fa-times"></i></button>
+                    </div>
+                    <!-- /. tools -->
+                 </div>
+                 <div class="card-body pad">
+                    <div class="mb-3">
+                       <textarea class="textarea" name="blog_description" placeholder="Place some text here"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+     </div>
+  </form>
+</div>

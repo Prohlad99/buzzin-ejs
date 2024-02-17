@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getAbout,getBlog,getContact,getIndex,getTeam } = require("../controllers/clientViewController");
+const { getAbout,getBlog,getContact,getIndex,getTeam } = require("../controllers/client");
 
 router.get("/", getIndex);
 router.get("/about", getAbout);
