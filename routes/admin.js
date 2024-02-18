@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { getDashboard, getAbout, getAddBlog, getAddCategory, getCategoryList, getBlogList } = require("../controllers/admin/render/render");
+const { getDashboard } = require("../controllers/admin/admin");
+const {getAbout} = require("../controllers/admin/about/about");
+const {getBlogAddForm, getBlogs} = require("../controllers/admin/blog/blog");
+const {getAddCategoryForm,getCategory} = require("../controllers/admin/category/category");
 
 
 
@@ -8,14 +11,10 @@ const { getDashboard, getAbout, getAddBlog, getAddCategory, getCategoryList, get
 // page rendering route 
 router.get("/", getDashboard);
 router.get("/about", getAbout);
-router.get("/blog/add", getAddBlog);
-router.get("/blogs", getBlogList);
-router.get("/category/add", getAddCategory);
-router.get("/categories", getCategoryList);
-
-
-
-
+router.get("/blog/add", getBlogAddForm);
+router.get("/blogs", getBlogs);
+router.get("/category/add", getAddCategoryForm);
+router.get("/categories", getCategory);
 
 
 

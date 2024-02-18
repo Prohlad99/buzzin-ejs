@@ -1,6 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
+const mongoose = require("mongoose");
+
 //internal import
 const client = require("./routes/client");
 const admin = require("./routes/admin");
@@ -14,6 +16,15 @@ const {
 
 const app = express();
 dotenv.config();
+
+// database connection
+mongoose.connect(process.env.MONGODB_CONNECTION_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+
+
+
 
 //request parser
 app.use(express.json());

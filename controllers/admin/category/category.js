@@ -2,7 +2,7 @@ const Category = require("../../../models/Category")
 
 //render add category page
 function getAddCategoryForm(req, res, next){
-    res.render("../../../views/admin/pages/add-category.ejs",{
+    res.render("admin/pages/add-category.ejs",{
         title: "Admin | Category"
     })
 }
@@ -13,7 +13,7 @@ function getAddCategoryForm(req, res, next){
 async function getCategory(req, res, next){
     try {
         const categories = await Category.find();
-        res.render("../../../views/admin/pages/category-list.ejs", {
+        res.render("admin/pages/category-list.ejs", {
             categories: categories
         })
     } catch (error) {

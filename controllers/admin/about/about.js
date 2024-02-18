@@ -4,7 +4,7 @@ const About = require("../../../models/About");
 async function getAbout(req, res, next){
     try {
         const about = await About.find();
-        res.render("../../../views/admin/pages/about-us.ejs", {
+        res.render("admin/pages/about-us.ejs", {
             about: about
         })
     } catch (error) {
